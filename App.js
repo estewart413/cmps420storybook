@@ -1,16 +1,37 @@
 import * as React from "react";
-import { View, Text } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import Main from "./Screens/Main";
+import PgOne from "./Screens/PgOne";
 
-export default function App() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
-  );
-}
+
+const Stack = createStackNavigator();
+
+function App() {
+    return (
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Main"
+            component={Main}
+            options={{
+              title: "Main Page",
+              headerTintColor: "#fff",
+              headerTitleAlign: "center",
+            }}
+          />
+          <Stack.Screen
+            name="PgOne"
+            component={PgOne}
+            options={{
+              title: "Page One",
+              headerTintColor: "#fff",
+              headerTitleAlign: "center",
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
+
+export default App;

@@ -7,9 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import { buttonColor, screenBackgroundColor } from "./Main";
-
-export default class Main extends React.Component {
+export default class PgOne extends React.Component {
   render() {
     return (
       <View style={styles.container}>

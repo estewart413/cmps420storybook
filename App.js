@@ -17,21 +17,10 @@ function App() {
           <Stack.Screen
             name="Main"
             component={Main}
-            options={{
-              title: "Main Page",
-              headerTintColor: "#fff",
-              headerTitleAlign: "center",
-         
-            }}
           />
           <Stack.Screen
             name="PgOne"
             component={PgOne}
-            options={{
-              title: "Page One",
-              headerTintColor: "#fff",
-              headerTitleAlign: "center",
-            }}
           />
         </Stack.Navigator>
       </NavigationContainer>

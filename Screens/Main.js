@@ -7,7 +7,12 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+import * as ScreenOrientation from 'expo-screen-orientation';
+
+ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE);
+
 export default class Main extends React.Component {
+    
   render() {
     return (
       <View style={styles.container}>

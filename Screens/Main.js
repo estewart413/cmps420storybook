@@ -19,7 +19,7 @@ export default class Main extends React.Component {
         <Text style={styles.text}>This is the Main Page</Text>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => this.props.navigation.navigate("PgOne")}
+          onPress={() => this.props.navigation.navigate("Page_1")}
         >
           <Text
             style={[

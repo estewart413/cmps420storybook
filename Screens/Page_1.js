@@ -8,8 +8,12 @@ import {
   ImageBackground,
   Image,
 } from "react-native";
-
-export default class Page_1 extends React.Component {
+import { Audio } from 'expo-av';
+const soundObject = new Audio.Sound();
+export default class Page_1 extends React.Component { 
+  async componentDidMount() {
+    await soundObject.loadAsync(require('../Assets/AudioTest.mp3'));
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -65,7 +69,7 @@ export default class Page_1 extends React.Component {
           </TouchableOpacity>
         </View>
         <View style={{ padding: 15, flexDirection: "row-reverse" }}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={async ()=> await soundObject.pauseAsync()}>
             <Image
               source={require("../Assets/Pause.png")}
               style={{
@@ -74,7 +78,10 @@ export default class Page_1 extends React.Component {
               }}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={async ()=> {
+            await soundObject.setPositionAsync(0);
+            await soundObject.playAsync();
+            }}>
             <Image
               source={require("../Assets/Play2.png")}
               style={{ height: 51, width: 51 }}

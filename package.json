@@ -4,6 +4,7 @@
     "@react-navigation/native": "^5.7.6",
     "@react-navigation/stack": "^5.9.3",
     "expo": "^39.0.3",
+    "expo-av": "~8.6.0",
     "expo-cli": "^3.27.14",
     "expo-screen-orientation": "~2.0.0",
     "react": "~16.13.0",

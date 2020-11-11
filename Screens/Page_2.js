@@ -82,7 +82,7 @@ export default class Page_1 extends React.Component {
           </TouchableOpacity>
           <View style={{width: 500, backgroundColor: 'rgba(50, 50, 50, .70)'}}>
           <Text style={styles.text}>
-            Once upon a time, there was a page two of a story. This story was very interesting and lots of fun.
+            Once upon a time, there was a page TWO of a story. This story was very interesting and lots of fun.
           </Text>
           </View>
    

@@ -29,20 +29,42 @@ export default class Page_1 extends React.Component {
             style={{ flex: 1, width: null, height: null }}
           ></ImageBackground>
         </View>
-        <View style={{flexDirection: 'row', marginBottom: 60}}>
-        <TouchableOpacity onPress={()=>this.props.navigation.navigate("Page_4")}>
-            <Image source={require('../Assets/Prev.png')}
-            style={{height: 50, width: 50}}></Image>
-            
+        <View
+          style={{
+            flexDirection: "row-reverse",
+            marginBottom: 80,
+            padding: 15,
+          }}
+        >
+          <TouchableOpacity>
+            <Image
+              source={require("../Assets/Settings.png")}
+              style={{
+                height: 50,
+                width: 50,
+              }}
+            />
           </TouchableOpacity>
-          <TouchableOpacity onPress={()=>this.props.navigation.navigate("Main")}>
-            <Image source={require('../Assets/Next.png')}
-            style={{height: 50, width: 50, marginLeft: 625}}></Image>
-            
-          </TouchableOpacity>
-          
         </View>
-        <View style={{ padding: 20, flexDirection: "row-reverse" }}>
+        <View style={{ flexDirection: "row", marginBottom: 55 }}>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate("Page_4")}
+          >
+            <Image
+              source={require("../Assets/Prev.png")}
+              style={{ height: 50, width: 50 }}
+            ></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate("Main")}
+          >
+            <Image
+              source={require("../Assets/Next.png")}
+              style={{ height: 50, width: 50, marginLeft: 625 }}
+            ></Image>
+          </TouchableOpacity>
+        </View>
+        <View style={{ padding: 15, flexDirection: "row-reverse" }}>
           <TouchableOpacity>
             <Image
               source={require("../Assets/Pause.png")}
@@ -57,20 +79,24 @@ export default class Page_1 extends React.Component {
               source={require("../Assets/Play2.png")}
               style={{ height: 51, width: 51 }}
             />
-            
           </TouchableOpacity>
+          <View style={{width: 500, backgroundColor: 'rgba(50, 50, 50, .70)'}}>
+          <Text style={styles.text}>
+            Once upon a time, there was a page five of a story. This story was very interesting and lots of fun.
+          </Text>
+          </View>
+   
           <TouchableOpacity>
             <Image
               source={require("../Assets/VolumeFull.png")}
               style={{
                 height: 50,
                 width: 50,
-                marginRight: 540
+                marginRight: 50
               }}
             />
           </TouchableOpacity>
         </View>
-      
       </View>
     );
   }
@@ -92,6 +118,10 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   text: {
-    fontSize: 18,
+    fontSize: 20,
+    color: "white",
+    fontFamily: "serif",
+    textAlign: 'center',
+    textAlignVertical: 'center'
   },
 });

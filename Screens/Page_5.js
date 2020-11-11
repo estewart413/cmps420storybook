@@ -24,7 +24,7 @@ export default class Page_1 extends React.Component {
           }}
         >
           <ImageBackground
-            source={require("../Assets/Page_1StockPic.jpg")}
+            source={require("../Assets/Page_5StockPic.jpg")}
             //resizeMode="contain"
             style={{ flex: 1, width: null, height: null }}
           ></ImageBackground>
